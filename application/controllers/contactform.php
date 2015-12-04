@@ -93,16 +93,7 @@ class contactform extends CI_Controller
             return TRUE;
         }
     }
-    
-    //validation function for captcha
-    public function captcha($str2)
-{
-    $captcha_info = $this->session->userdata('captcha_info');
-    if ($captcha_info['code'] != $st2r)
-    {
-        $this->form_validation->set_message('captcha', 'The %s was not input correctly. Please try again.');
-        return false;
-    }
+
 
     return true;
 }
